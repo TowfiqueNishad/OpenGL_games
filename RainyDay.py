@@ -1,3 +1,4 @@
+'''
 from OpenGL.GL import *
 from OpenGL.GLUT import *
 from OpenGL.GLU import *
@@ -31,8 +32,7 @@ last_time = time.time()
 # ===== Coordinate Conversion =====
 def convert_coordinate(x, y):
     ndc_x = (2.0 * x / WINDOW_WIDTH) - 1.0
-    ndc_y = 1.0 - (2.0 * y / WINDOW_HEIGHT)
-    return ndc_x, ndc_y
+   return ndc_x, ndc_y
 
 # ===== Raindrop Setup =====
 def drop_1():
@@ -50,7 +50,7 @@ def drop_initiate():
         raindrops.append(d)
 
 # ===== Draw Functions =====
-def draw_background():
+ def draw_background():
     day_color = (0.7, 0.9, 1.0)
     night_color = (0.02, 0.04, 0.12)
     r = night_color[0] * (1 - brightness) + day_color[0] * brightness
@@ -67,7 +67,7 @@ def draw_background():
     glVertex2f(-1.0, 1.0)
     glEnd()
 
-def draw_field():
+ def draw_field():
     day_field = (0.2, 0.8, 0.3)
     night_field = (0.03, 0.12, 0.05)
     field_col = tuple(night_field[i] * (1 - brightness) + day_field[i] * brightness for i in range(3))
@@ -316,3 +316,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+'''
